@@ -36,5 +36,7 @@ jobs:
       # run tests!
       - run: npm test
 
+      - store_test_results:
+        path: ~/repo/test/unit/coverage/coverage-final.json
 
 
