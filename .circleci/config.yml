@@ -34,9 +34,9 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: npm test
+      - run: npm run unit
 
       - store_test_results:
-          path: ~/repo/test/unit/coverage/lcov-report
+          path: ~/repo/junit.xml
 
 
