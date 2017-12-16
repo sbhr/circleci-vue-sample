@@ -37,6 +37,6 @@ jobs:
       - run: npm test
 
       - store_test_results:
-        path: /tmp/test-results
+          path: ~/repo/circleci-vue-sample/test/unit/coverage
 
 
