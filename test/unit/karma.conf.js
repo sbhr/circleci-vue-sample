@@ -26,8 +26,14 @@ module.exports = function (config) {
       dir: './coverage',
       reporters: [
         { type: 'lcov', subdir: '.' },
-        { type: 'text-summary' }
-      ]
+        { type: 'text-summary' },
+        'junit'
+      ],
+      junitReporter: {
+        outputDir: process.env.JUNIT_REPORT_PATH,
+        outputFile: process.env.JUNIT_REPORT_NAME,
+        useBrowserName: false
+      }
     }
   })
 }
